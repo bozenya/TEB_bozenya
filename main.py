@@ -17,3 +17,6 @@ if __name__ == '__main__':
 print("abcdefghijklmnop")
 
 print("ssssssssssssssssssss")
+
+x = input("podaj liczbe")
+
