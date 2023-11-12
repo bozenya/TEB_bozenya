@@ -11,7 +11,7 @@ print(koniec_h, ":", koniec_m)
 
 print(4/11)
 """
-
+hhhhhhhhhh
 h = int(input("Czas startu (godziny): "))
 
 m = int(input("Czas startu (minuty): "))
