@@ -1,0 +1,30 @@
+---------------------------------------------------------------------------------BAZA DANYCH-------------------------------------------------------------------------------------
+BAZA DANYCH Archery Forum
+
+
+- BAZA DANYCH SQLITE
+- wyzwalacz: po usunięciu jakiegokolwiek łuku dodaje te pozycje do tabeli 'usuniete_luki'
+- zastosowano klucze główne  i obce, np. tabela luki.ID_własciwosci (klucz obcy) = wlasciwosci.ID_własciwosci (klucz główny)
+- numer lokalizacji łuku jest unikalny
+- autoincrement jest zasosowany w co najamnniej 2 tabelach
+-2 widoki: zakupione łuki oraz luki gdzie max_draw_weight, czyli maksymalny naciąg łuku jest większy od 5 (wartosc dowolna)
+
+
+---------------------------------------------------------------------------------DJANGO-------------------------------------------------------------------------------------
+Archery Forum
+
+- ŁUKI TOP: wejście w  szczegóły wybranego modelu i spradzenie parametrów typu dostępność produktu
+- dodanie nowego id łuku do forum
+- edycja opisu każdego id_luku
+- przelicznik wersja wstępna: powinien wyświetlać wybrane sugestie modeli id_łuk z bazy danych w oparciu np. siła naciągu albo let-off.
+-kompedium to w sumie pdf 
+-krótko o łukach bloczkowych czyli zwykłe artykuły i np. okienko rozwijane jako element dodatkowy 
+- wyswietlanie hurtowni
+
+Plany na rozwój: menu główne 
+
+LUKI BLOCZKOWE -  ŁUKI TOP -> ŁUKI BLOCZKOWE 
+SKLEP - CAŁY ZASÓB DO WYSWIETLENIA JAK W STRONIE SPRZEDAZOWEJ E-COMMERCE 
+FORUM DYSKUSYJNE - DOODAWANIE OPINII DO KONKRETNYCH MODELI
+KONTAKT - ADRES MAPA 
+

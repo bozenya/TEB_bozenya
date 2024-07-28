@@ -1,0 +1,103 @@
+-------------------------------FLASK---------------------------------------------
+PS C:\Users\Bożencia\Desktop\projektPython\flask_archery> $env:FLASK_APP="server.py"
+PS C:\Users\Bożencia\Desktop\projektPython\flask_archery> python -m flask run
+ * Serving Flask app 'server.py'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+
+-------------------------------DJANGO--------------------------------------------
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. Wszelkie prawa zastrzeżone.
+
+C:\Users\Bożencia>cd C:\
+
+C:\>cd Projects
+
+C:\Projects>django\Scripts\activate.bat
+
+(django) C:\Projects>cd Byeno
+
+(django) C:\Projects\Byeno>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+March 03, 2024 - 11:47:57
+Django version 5.0.2, using settings 'Byeno.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+------------------admin django----------------------
+(django) c:\Projects\Byeno>python manage.py createsuperuser
+Username (leave blank to use 'bozencia'): bozenya
+Email address: bozenya9@gmail.com
+Password: gruparydzyka
+Password (again): gruparydzyka
+
+Dane testowego usera:
+username: bozenya2
+password: Gruparydzyka
+
+
+function loadContent(nazwa) {
+    html = new XMLHttpRequest()
+    html.onloadend = (e) => {
+        document.querySelector('main').innerHTML = html.responseText
+    }
+    html.open("POST", `./${nazwa}.html`)
+    html.send()
+}
+
+window.onload = function() {
+    // Obsługa kliknięć w przyciski w nawigacji
+    document.querySelectorAll('.przycisk').forEach((button) => {
+        button.addEventListener('click', function() {
+            var url = button.getAttribute('onclick').split("'")[1];
+            window.location.href = url;
+        });
+    });
+
+    // Obsługa kliknięć w przyciski w sekcji "WIĘCEJ OPCJI"
+    document.querySelectorAll('.button').forEach((button) => {
+        button.addEventListener('click', function() {
+            var url = button.getAttribute('onclick').split("'")[1];
+            window.location.href = url;
+        });
+    });
+};
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Pobierz wszystkie elementy listy klientów po załadowaniu całej strony
+    const clientItems = document.querySelectorAll('.client-item');
+
+    // Iteruj przez każdy element listy i dodaj do niego nasłuchiwacz zdarzeń onclick
+    clientItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Pobierz id_klient z atrybutu data-id
+            const id_klient = this.getAttribute('data-id');
+            // Przekieruj użytkownika do strony szczegółów klienta
+            window.location.href = `/show/klienci-details/${id_klient}`;
+        });
+    });
+});
+
+        document.getElementById('logo').addEventListener('click', function() {
+            var a = document.createElement('a');
+            // Używamy tagu templatek static, aby uzyskać ścieżkę do pliku PDF
+            a.href = '{% static "ŁUK_BLOCZKOWY.pdf" %}';
+            a.target = '_blank';
+            a.download = 'ŁUK_BLOCZKOWY.pdf';
+            var clickEvent = new MouseEvent('click', {
+                'view': window,
+                'bubbles': true,
+                'cancelable': true
+            });
+            a.dispatchEvent(clickEvent);
+        });
